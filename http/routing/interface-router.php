@@ -64,14 +64,6 @@ interface Router {
 	public function options( string $uri, $action = '' );
 
 	/**
-	 * Register a route for any HTTP method.
-	 *
-	 * @param string $uri URL to register for.
-	 * @param mixed  $action Callback action.
-	 */
-	public function any( string $uri, $action = '' );
-
-	/**
 	 * Dispatch a request to the registered routes.
 	 *
 	 * @param Request $request Request object.
@@ -104,14 +96,12 @@ interface Router {
 	 * Register a REST API route
 	 *
 	 * @param string          $namespace Namespace for the REST API route.
-	 * @param callable|string $callback  Callback that will be invoked to register
-	 *                                   routes OR a string route.
-	 * @param array           $args      Callback for the route if $callback is a
-	 *                                   string route OR arguments to pass to
-	 *                                   the register_rest_route() call. Not used if $callback
-	 *                                   is a closure.
+	 * @param \Closure|string $route Route to register or a callback function that
+	 *                               will register child REST API routes.
+	 * @param array           $args Arguments for the route or callback for the route.
+	 *                              Not used if $route is a callback.
 	 */
-	public function rest_api( string $namespace, callable|string $callback, callable|array $args = [] );
+	public function rest_api( string $namespace, $route, $args = [] );
 
 	/**
 	 * Rename a route.
