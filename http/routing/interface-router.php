@@ -75,11 +75,14 @@ interface Router {
 	 * Dispatch a request to the registered routes.
 	 *
 	 * @param Request $request Request object.
+	 * @return Response|null
 	 */
 	public function dispatch( Request $request ): ?Response;
 
 	/**
 	 * Get registered routes.
+	 *
+	 * @return RouteCollection
 	 */
 	public function get_routes(): RouteCollection;
 
@@ -115,6 +118,7 @@ interface Router {
 	 *
 	 * @param string $old_name Old route name.
 	 * @param string $new_name New route name.
+	 * @return static
 	 *
 	 * @throws \InvalidArgumentException Thrown when attempting to rename a route
 	 *                                  a name that is already taken.

@@ -18,6 +18,7 @@ interface Model_Meta {
 	 *
 	 * @param string $meta_key Meta key to retrieve.
 	 * @param bool   $single Return the first meta key, defaults to true.
+	 * @return mixed
 	 */
 	public function get_meta( string $meta_key, bool $single = true ): mixed;
 
@@ -72,6 +73,7 @@ interface Model_Meta {
 	 * @param string $key Meta key.
 	 * @param mixed  $value Meta value.
 	 * @param bool   $update Flag to update the queued meta.
+	 * @return void
 	 */
 	public function queue_meta_attribute( string $key, $value, bool $update = true ): void;
 

@@ -24,6 +24,7 @@ interface Dispatcher {
 	 * Determine if a given event has listeners.
 	 *
 	 * @param  string $event_name
+	 * @return bool
 	 */
 	public function has_listeners( $event_name ): bool;
 
