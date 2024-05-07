@@ -15,6 +15,7 @@ interface Queue_Manager {
 	 * Get a queue provider instance.
 	 *
 	 * @param string $name Provider name, optional.
+	 * @return Provider
 	 */
 	public function get_provider( string $name = null ): Provider;
 

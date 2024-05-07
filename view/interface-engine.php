@@ -16,6 +16,7 @@ interface Engine {
 	 *
 	 * @param  string $path View path.
 	 * @param  array  $data View data.
+	 * @return string
 	 */
 	public function get( string $path, array $data = [] ): string;
 }
