@@ -37,6 +37,7 @@ interface Kernel extends \Mantle\Contracts\Kernel {
 	 *
 	 * @param string $command Command name.
 	 * @param array  $parameters Command parameters.
+	 * @return CommandTester
 	 */
 	public function test( string $command, array $parameters = [] ): CommandTester;
 
@@ -57,6 +58,7 @@ interface Kernel extends \Mantle\Contracts\Kernel {
 	 *
 	 * @param  \Symfony\Component\Console\Input\InputInterface $input
 	 * @param  int                                             $status
+	 * @return void
 	 */
 	public function terminate( $input, $status ): void;
 }

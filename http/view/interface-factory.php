@@ -34,6 +34,8 @@ interface Factory {
 
 	/**
 	 * Get all of the shared data for the environment.
+	 *
+	 * @return array
 	 */
 	public function get_shared(): array;
 
@@ -47,6 +49,7 @@ interface Factory {
 	 * @param array|string       $name View name, optional. Supports passing variables in if
 	 *                                 $variables is not used.
 	 * @param array              $variables Variables for the view, optional.
+	 * @return Collection
 	 */
 	public function loop( $data, string $slug, $name = null, array $variables = [] ): Collection;
 
@@ -59,6 +62,7 @@ interface Factory {
 	 * @param array|string       $name View name, optional. Supports passing variables in if
 	 *                                 $variables is not used.
 	 * @param array              $variables Variables for the view, optional.
+	 * @return Collection
 	 */
 	public function iterate( $data, string $slug, $name = null, array $variables = [] ): Collection;
 
@@ -69,6 +73,7 @@ interface Factory {
 	 * @param array|string $name View name, optional. Supports passing variables in if
 	 *                           $variables is not used.
 	 * @param array        $variables Variables for the view, optional.
+	 * @return View
 	 */
 	public function make( string $slug, $name = null, array $variables = [] ): View;
 

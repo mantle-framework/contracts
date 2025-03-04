@@ -8,7 +8,6 @@
 namespace Mantle\Contracts\Exceptions;
 
 use Symfony\Component\Console\Output\OutputInterface;
-use Symfony\Component\HttpFoundation\Response as SymfonyResponse;
 use Throwable;
 
 /**

@@ -14,6 +14,8 @@ interface Block {
 	/**
 	 * Executed by the Block Service Provider to handle registering the block
 	 * with Mantle and WordPress.
+	 *
+	 * @return void
 	 */
 	public function register(): void;
 }

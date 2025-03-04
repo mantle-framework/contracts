@@ -15,6 +15,7 @@ interface Repository {
 	 * Check if a configuration value exists.
 	 *
 	 * @param string $key Key to get, period-delimited.
+	 * @return bool
 	 */
 	public function has( string $key ): bool;
 
@@ -37,6 +38,8 @@ interface Repository {
 
 	/**
 	 * Get all configuration values.
+	 *
+	 * @return array
 	 */
 	public function all(): array;
 }

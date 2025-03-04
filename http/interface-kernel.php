@@ -25,6 +25,7 @@ interface Kernel {
 	 *
 	 * @param Request  $request  Request object.
 	 * @param Response $response Response object.
+	 * @return void
 	 */
 	public function terminate( Request $request, mixed $response ): void;
 }

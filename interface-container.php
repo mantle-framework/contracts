@@ -70,7 +70,7 @@ interface Container extends ContainerInterface {
 	 * @param string   $abstract Abstract name.
 	 * @param \Closure $closure Closure callback.
 	 */
-	public function extend( $abstract, Closure $closure );
+	public function extend( $abstract, Closure $closure);
 
 	/**
 	 * Register an existing instance as shared in the container.
@@ -126,7 +126,7 @@ interface Container extends ContainerInterface {
 	 * @param \Closure|string $abstract Abstract name.
 	 * @param \Closure|null   $callback Callback.
 	 */
-	public function resolving( $abstract, ?Closure $callback = null );
+	public function resolving( $abstract, Closure $callback = null );
 
 	/**
 	 * Register a new after resolving callback.
@@ -134,5 +134,5 @@ interface Container extends ContainerInterface {
 	 * @param \Closure|string $abstract Abstract name.
 	 * @param \Closure|null   $callback Callback.
 	 */
-	public function after_resolving( $abstract, ?Closure $callback = null );
+	public function after_resolving( $abstract, Closure $callback = null );
 }

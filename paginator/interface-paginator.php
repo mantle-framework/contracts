@@ -19,10 +19,12 @@ interface Paginator {
 	 * @param string $path Path to set.
 	 * @return static
 	 */
-	public function path( ?string $path = null );
+	public function path( string $path = null );
 
 	/**
 	 * Retrieve the paginator's path.
+	 *
+	 * @return string
 	 */
 	public function get_path(): string;
 
@@ -46,20 +48,26 @@ interface Paginator {
 	 * @param int $current_page Page to set.
 	 * @return static
 	 */
-	public function set_current_page( ?int $current_page = null );
+	public function set_current_page( int $current_page = null );
 
 	/**
 	 * Retrieve the current page.
+	 *
+	 * @return int
 	 */
 	public function current_page(): int;
 
 	/**
 	 * Retrieve the items in the paginator.
+	 *
+	 * @return Collection
 	 */
 	public function items(): Collection;
 
 	/**
 	 * Retrieve the count of the paginator.
+	 *
+	 * @return int
 	 */
 	public function count(): int;
 
@@ -81,16 +89,22 @@ interface Paginator {
 
 	/**
 	 * Retrieve the query variables for the paginator.
+	 *
+	 * @return array
 	 */
 	public function query(): array;
 
 	/**
 	 * Retrieve the next URL.
+	 *
+	 * @return string|null
 	 */
 	public function next_url(): ?string;
 
 	/**
 	 * Retrieve the previous URL.
+	 *
+	 * @return string|null
 	 */
 	public function previous_url(): ?string;
 }
