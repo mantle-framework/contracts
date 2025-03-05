@@ -21,9 +21,8 @@ interface Application {
 	 *
 	 * @param InputInterface|null  $input Input interface.
 	 * @param OutputInterface|null $output Output interface.
-	 * @return int
 	 */
-	public function run( InputInterface $input = null, OutputInterface $output = null ): int;
+	public function run( ?InputInterface $input = null, ?OutputInterface $output = null ): int;
 
 	/**
 	 * Run a command through the console application by name.
@@ -31,7 +30,6 @@ interface Application {
 	 * @param string               $command Command name.
 	 * @param array                $parameters Command parameters.
 	 * @param OutputInterface|null $output_buffer Output buffer.
-	 * @return int
 	 */
 	public function call( string $command, array $parameters = [], $output_buffer = null ): int;
 
@@ -40,7 +38,6 @@ interface Application {
 	 *
 	 * @param string $command Command name.
 	 * @param array  $parameters Command parameters.
-	 * @return CommandTester
 	 */
 	public function test( string $command, array $parameters = [] ): CommandTester;
 

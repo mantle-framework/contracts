@@ -22,9 +22,8 @@ interface Url_Generator {
 	 * Get the URL for the previous request.
 	 *
 	 * @param string $fallback Fallback value, optional.
-	 * @return string
 	 */
-	public function previous( string $fallback = null ): string;
+	public function previous( ?string $fallback = null ): string;
 
 	/**
 	 * Generate a URL to a specific path.
@@ -35,7 +34,7 @@ interface Url_Generator {
 	 * @param bool                 $secure Flag if should be forced to be secure.
 	 * @return string
 	 */
-	public function to( string $path, array $extra_query = [], array $extra_params = [], bool $secure = null );
+	public function to( string $path, array $extra_query = [], array $extra_params = [], ?bool $secure = null );
 
 	/**
 	 * Generate a URL for a route.
@@ -43,7 +42,6 @@ interface Url_Generator {
 	 * @param string $name Route name.
 	 * @param array  $parameters Route parameters.
 	 * @param bool   $absolute Flag if should be absolute.
-	 * @return string
 	 *
 	 * @throws \Symfony\Component\Routing\Exception\RouteNotFoundException If route not found.
 	 */
